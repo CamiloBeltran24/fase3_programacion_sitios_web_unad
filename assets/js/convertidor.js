@@ -1,5 +1,9 @@
 let button = document.getElementById('calculadora_btn');
 
+let convertidor = {
+  byteKilobyte: function () {},
+};
+
 function checkNumber(number_box) {
   if (number_box.value != '') {
     let number = Number(number_box.value);
@@ -9,28 +13,28 @@ function checkNumber(number_box) {
   }
 }
 
-function calcular(numero, inicial, buscado) {
-  let resultado = 0;
-  switch ((inicial, buscado)) {
-    case ('bytes', 'kilobyte'):
-      resultado = numero / 1024;
-      break;
+// function calcular(numero, inicial, buscado) {
+//   let resultado = 0;
+//   switch ((inicial, buscado)) {
+//     case ('bytes', 'kilobyte'):
+//       resultado = numero / 1024;
+//       break;
 
-    case ('bytes', 'megabyte'):
-      break;
+//     case ('bytes', 'megabyte'):
+//       break;
 
-    case ('bytes', 'gigabyte'):
-      break;
+//     case ('bytes', 'gigabyte'):
+//       break;
 
-    case ('bytes', 'terabyte'):
-      break;
+//     case ('bytes', 'terabyte'):
+//       break;
 
-    case ('kilobytes', 'megabyte'):
-      break;
-    default:
-      break;
-  }
-}
+//     case ('kilobytes', 'megabyte'):
+//       break;
+//     default:
+//       break;
+//   }
+// }
 
 button.addEventListener('click', () => {
   let number_box = document.getElementById('cantidad');
@@ -38,8 +42,8 @@ button.addEventListener('click', () => {
   let buscado = document.getElementById('buscado').value;
 
   if (buscado != inicial) {
-    let number = checkNumber(number_box) ? checkNumber(number_box) : '';
-    calcular(number, inicial, buscado);
+    let number = checkNumber(number_box) ? checkNumber(number_box) : ''; //ternario para comprobar validar el numero y asignarlo a la
+    // calcular(number, inicial, buscado);
   } else {
     alert('Hey, Selecciona unidades diferentes');
   }
