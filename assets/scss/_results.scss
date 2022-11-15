@@ -1,0 +1,31 @@
+.results {
+  padding: 50px 0;
+  h2 {
+    font-family: $primary_font;
+    color: $gray_coral;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  table {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    th {
+      font-family: $primary_font;
+      letter-spacing: 0.7px;
+      font-weight: 600;
+      color: $gray_coral;
+      background-repeat: no-repeat;
+      background-size: 22px;
+      &.money {
+        background-image: url('/assets/svg/money.svg');
+        background-position: top 45% right 42%;
+      }
+    }
+    td {
+      padding: 15px 8px;
+    }
+  }
+}

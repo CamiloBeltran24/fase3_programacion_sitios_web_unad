@@ -1,0 +1,66 @@
+header {
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  nav.navbar {
+    background-color: $dark_blue_gray;
+    padding: 0 50px;
+    hr {
+      background-color: $white;
+      border: none;
+    }
+    .navbar-brand {
+      margin-right: 50px;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    a {
+      color: $white !important;
+      position: relative;
+      display: inline-block;
+      font-family: $secondary_font;
+      font-size: 14px;
+      letter-spacing: 0.8px;
+      text-transform: capitalize;
+      &.nav-link {
+        color: $white !important;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $white;
+        bottom: 0;
+        left: 50%;
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover,
+      &.show {
+        &::before {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+    .dropdown-menu {
+      background-color: $dark_blue_gray;
+      padding: 20px;
+      width: fit-content;
+      text-align: center;
+      transition: all 0.5s ease-in-out;
+      box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+    }
+    .dropdown-item {
+      width: fit-content;
+      margin: 0 auto;
+      padding: 4px 0;
+      &:hover {
+        background-color: $dark_blue_gray;
+      }
+    }
+  }
+}

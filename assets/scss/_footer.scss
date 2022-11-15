@@ -1,0 +1,44 @@
+footer {
+  width: 100%;
+  // position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  text-align: center;
+  background-color: $gray_coral;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  span {
+    color: $white;
+    font-size: 10px;
+    font-family: $secondary_font;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+    a {
+      text-decoration: none;
+      color: $white;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $white;
+        bottom: -3px;
+        left: 50%;
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover {
+        color: $white;
+        &::before {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+}

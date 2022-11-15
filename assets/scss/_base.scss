@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  height: 100vh;
+}
+.content {
+  padding-top: 120px;
+}
+
+h1 {
+  font-family: $primary_font;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 50px 0;
+  color: $gray_coral;
+}
