@@ -1,8 +1,32 @@
 let button = document.getElementById('calculadora_btn');
 
-let convertidor = {
-  byteKilobyte: function () {},
+let byte = {
+  byteToKilobyte: function (bytes) {
+    return bytes / 1000
+  },
+  byteToMegabyte:function(bytes){
+    return bytes / 1000000
+  },
+  byteToGigabyte:function(bytes){
+    return bytes / 1000000000
+  },
+  byteToTerabyte:function(bytes){
+    return bytes / 1000000000000
+  }
 };
+
+const kilobyte = {
+  kilobyteToByte: function(){},
+  kilobyteToMegabyte:function(){},
+  kilobyteToGigabyte: function(){},
+  kilobyteToterabyte: function(){}
+}
+
+const megaByte = {
+  
+}
+
+console.log(byte.byteToKilobyte(1));
 
 function checkNumber(number_box) {
   if (number_box.value != '') {
@@ -13,28 +37,6 @@ function checkNumber(number_box) {
   }
 }
 
-// function calcular(numero, inicial, buscado) {
-//   let resultado = 0;
-//   switch ((inicial, buscado)) {
-//     case ('bytes', 'kilobyte'):
-//       resultado = numero / 1024;
-//       break;
-
-//     case ('bytes', 'megabyte'):
-//       break;
-
-//     case ('bytes', 'gigabyte'):
-//       break;
-
-//     case ('bytes', 'terabyte'):
-//       break;
-
-//     case ('kilobytes', 'megabyte'):
-//       break;
-//     default:
-//       break;
-//   }
-// }
 
 button.addEventListener('click', () => {
   let number_box = document.getElementById('cantidad');
