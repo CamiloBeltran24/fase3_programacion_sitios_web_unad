@@ -16,92 +16,179 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Electronic SAS</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Administrador</a
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Electronic SAS</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Administrador</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    inventarios
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/ingresar_producto.html"
+                        >Ingresar Producto</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/actualizar_producto.html"
+                        >Actualizar Producto</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/eliminar_producto.html"
+                        >Eiminar Producto</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/consultar_producto.html"
+                        >consultar Producto</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Utilidades
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/calculadora_precio_venta.html"
+                        >Calculadora Ganancias</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/convertidor_unidades.html"
+                        >Convertidor Unidades</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="social-list">
+                <li class="social-list__item">
+                  <a
+                    href="https://www.linkedin.com/in/camilobeltran24/"
+                    target="_blank"
+                    class="linkedin"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li class="social-list__item">
+                  <a
+                    href="https://github.com/CamiloBeltran24"
+                    target="_blank"
+                    class="github"
+                    >GitHub</a
+                  >
+                </li>
+                <li class="social-list__item">
+                  <a
+                    href="https://twitter.com/CamiloBeltran"
+                    target="_blank"
+                    class="twitter"
+                    >Twitter</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container container-lg container-xl">
+      <main class="content">
+        <h1>ELECTRONIC SAS</h1>
+
+        <section class="boxesContainer">
+          <div class="box">
+            <h2>Administrador</h2>
+            <p class="description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="box">
+            <h2>inventarios</h2>
+            <ul>
+              <li>
+                <a href="/pages/ingresar_producto.html">Ingresar Producto</a>
+              </li>
+              <li>
+                <a href="/pages/consultar_producto.html">Consultar Producto</a>
+              </li>
+              <li>
+                <a href="/pages/actualizar_producto.html"
+                  >Actualizar Producto</a
                 >
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  inventarios
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Utilidades
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="/pages/calculadora_precio_venta.html"
-                      >Calculadora Ganancias</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="/pages/convertidor_unidades.html"
-                      >Convertidor Unidades</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="social-list">
-              <li class="social-list__item">
-                <a href="http://" target="_blank">LinkedIn</a>
-              </li>
-              <li class="social-list__item">
-                <a href="http://" target="_blank">GitHub</a>
-              </li>
-              <li class="social-list__item">
-                <a href="http://" target="_blank">Twitter</a>
+              <li>
+                <a href="/pages/eliminar_producto.html">Eliminar Producto</a>
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
-    </header>
-    <div class="container container-lg container-xl">
-      <main class="content"></main>
+          <div class="box">
+            <h2>Utilidades</h2>
+            <ul>
+              <li>
+                <a href="/pages/calculadora_precio_venta.html"
+                  >Calculadora Ganancias</a
+                >
+              </li>
+              <li>
+                <a href="/pages/convertidor_unidades.html"
+                  >Convertidor unidades</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
     </div>
     <!-- Includes de Bootstrap y popper.js -->
     <script

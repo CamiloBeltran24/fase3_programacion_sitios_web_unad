@@ -4,9 +4,9 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
+  background-color: $dark_blue_gray;
   nav.navbar {
-    background-color: $dark_blue_gray;
-    padding: 0 50px;
+    padding: 15px 50px;
     hr {
       background-color: $white;
       border: none;
@@ -60,6 +60,47 @@ header {
       padding: 4px 0;
       &:hover {
         background-color: $dark_blue_gray;
+      }
+    }
+    .social-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      li {
+        margin: 0 10px;
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        a {
+          text-decoration: none;
+          display: inline-block;
+          font-size: 0;
+          width: 22px;
+          height: 22px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transition: all 0.3s ease-in-out;
+          &.linkedin {
+            background-image: url('/assets/svg/linkedin.svg');
+          }
+          &.twitter {
+            background-image: url('/assets/svg/twitter.svg');
+          }
+          &.github {
+            background-image: url('/assets/svg/github.svg');
+          }
+          &:hover {
+            transform: scale(1.2);
+            &::before {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

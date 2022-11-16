@@ -28,10 +28,10 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
+  background-color: #575d90;
 }
 header nav.navbar {
-  background-color: #575d90;
-  padding: 0 50px;
+  padding: 15px 50px;
 }
 header nav.navbar hr {
   background-color: #fff;
@@ -84,6 +84,47 @@ header nav.navbar .dropdown-item {
 }
 header nav.navbar .dropdown-item:hover {
   background-color: #575d90;
+}
+header nav.navbar .social-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+header nav.navbar .social-list li {
+  margin: 0 10px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+header nav.navbar .social-list li a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s ease-in-out;
+}
+header nav.navbar .social-list li a.linkedin {
+  background-image: url("/assets/svg/linkedin.svg");
+}
+header nav.navbar .social-list li a.twitter {
+  background-image: url("/assets/svg/twitter.svg");
+}
+header nav.navbar .social-list li a.github {
+  background-image: url("/assets/svg/github.svg");
+}
+header nav.navbar .social-list li a:hover {
+  transform: scale(1.2);
+}
+header nav.navbar .social-list li a:hover::before {
+  display: none;
 }
 
 footer {
@@ -144,6 +185,28 @@ footer span a:hover::before {
   font-family: "Forum", cursive;
   text-align: center;
   color: #595f72;
+  position: relative;
+}
+.form h2::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  top: -30px;
+  right: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.form h2.add_title::after {
+  background-image: url("/assets/svg/add.svg");
+}
+.form h2.update_title::after {
+  background-image: url("/assets/svg/update.svg");
+}
+.form h2.delete_title::after {
+  background-image: url("/assets/svg/delete.svg");
 }
 .form .field {
   position: relative;
@@ -218,17 +281,22 @@ footer span a:hover::before {
   justify-content: center;
 }
 .form .btn {
-  width: 150px;
+  min-width: 150px;
   margin: 0 10px;
   transition: all 0.5s ease-in-out;
+  padding: 8px 15px;
   letter-spacing: 0.5px;
   font-family: "Montserrat", sans-serif;
 }
-.form .btn.calcular {
+.form .btn.calcular, .form .btn.submit {
   color: #fff;
   background-color: #575d90;
   outline: none !important;
-  border-color: none 1px solid #575d90;
+  border: 1px solid #575d90;
+}
+.form .btn.calcular.delete, .form .btn.submit.delete {
+  background-color: #d65a4a;
+  border-color: #d65a4a;
 }
 .form .btn.limpiar {
   background-color: #84a07c;
@@ -269,6 +337,64 @@ footer span a:hover::before {
 }
 .results table td {
   padding: 15px 8px;
+}
+
+.boxesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+.boxesContainer .box {
+  text-align: center;
+  width: 350px;
+  height: 250px;
+  padding: 20px;
+  border: 1px solid #575d90;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.boxesContainer .box h2 {
+  font-family: "Forum", cursive;
+  text-transform: capitalize;
+  font-size: 28px;
+  margin: 20px 0;
+}
+.boxesContainer .box ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+}
+.boxesContainer .box ul li {
+  display: block;
+  width: 100%;
+}
+.boxesContainer .box ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #595f72;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+.boxesContainer .box ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #595f72;
+}
+.boxesContainer .box ul li a:hover {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=styles.css.map */

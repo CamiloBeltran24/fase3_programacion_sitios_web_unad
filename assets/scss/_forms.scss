@@ -11,6 +11,34 @@
     font-family: $primary_font;
     text-align: center;
     color: $gray_coral;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      top: -30px;
+      right: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &.add_title {
+      &::after {
+        background-image: url('/assets/svg/add.svg');
+      }
+    }
+    &.update_title {
+      &::after {
+        background-image: url('/assets/svg/update.svg');
+      }
+    }
+    &.delete_title {
+      &::after {
+        background-image: url('/assets/svg/delete.svg');
+      }
+    }
   }
   .field {
     position: relative;
@@ -83,17 +111,23 @@
     justify-content: center;
   }
   .btn {
-    width: 150px;
+    min-width: 150px;
     margin: 0 10px;
     transition: all 0.5s ease-in-out;
     // font-weight: 600;
+    padding: 8px 15px;
     letter-spacing: 0.5px;
     font-family: $secondary_font;
-    &.calcular {
+    &.calcular,
+    &.submit {
       color: $white;
       background-color: $dark_blue_gray;
       outline: none !important;
-      border-color: none 1px solid $dark_blue_gray;
+      border: 1px solid $dark_blue_gray;
+      &.delete {
+        background-color: $error;
+        border-color: $error;
+      }
     }
     &.limpiar {
       background-color: $antichoke_green;
